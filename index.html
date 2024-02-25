@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Color Picker</title>
+    <link rel="stylesheet" type="text/css" href="colorjoe/colorjoe.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="colorjoe/colorjoe.min.js"></script>
+  </head>
+  <body>
+    <div id="test">
+      <div class="hex-code-container">
+        <div class="hex-code-square" onclick="openColorPickerModal()"></div>
+        <input
+          type="text"
+          class="hex-code"
+          value="#FF490C"
+          placeholder="#000000"
+        />
+        <div class="hex-code-colorjoe-copy">
+          <button
+            class="hex-code-copy-color"
+            onclick="copyValue()"
+            tabindex="-1"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="colorjoe-container">
+      <div class="exit-modal">
+        <button class="exit-submit" onclick="closeColorPickerModal()">
+          &#x2715;
+        </button>
+      </div>
+      <div class="colorjoe"></div>
+      <div class="colorjoe-config">
+        <div class="colorjoe-selected-color-mode">
+          <select id="mode">
+            <option value="hex" selected>Hex</option>
+            <option value="rgb">RGB</option>
+            <option value="css">CSS</option>
+          </select>
+        </div>
+        <div class="colorjoe-selected-color-text">
+          <div class="hex default">
+            <input id="hex" type="text" placeholder="#000000" />
+          </div>
+          <div class="rgb">
+            <input
+              id="r"
+              class="rgb-hover"
+              type="text"
+              inputmode="numeric"
+              min="0"
+              max="255"
+              placeholder="R"
+              value="0"
+            />
+            <input
+              id="g"
+              class="rgb-hover"
+              type="text"
+              inputmode="numeric"
+              min="0"
+              max="255"
+              placeholder="G"
+              value="0"
+            />
+            <input
+              id="b"
+              class="rgb-hover"
+              type="text"
+              inputmode="numeric"
+              min="0"
+              max="255"
+              placeholder="B"
+              value="0"
+            />
+          </div>
+          <div class="css">
+            <input
+              id="css"
+              type="text"
+              placeholder="rgba(0, 0, 0, 1)"
+              value="rgba(0, 0, 0, 1)"
+            />
+          </div>
+        </div>
+        <div class="colorjoe-copy">
+          <button class="copy-color" onclick="copyValue()"></button>
+        </div>
+      </div>
+    </div>
+    <script src="dist/awesome.js"></script>
+  </body>
+</html>

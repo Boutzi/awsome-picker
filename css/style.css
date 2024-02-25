@@ -1,0 +1,301 @@
+body {
+  background: #121212;
+  display: flex;
+}
+
+#test {
+  width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+.hex-code-container {
+  height: 32px;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  color: #eee;
+  display: flex;
+  margin:20px;
+}
+
+
+.hex-code {
+  z-index: 1;
+  position: absolute;
+  font-size: 12px;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  padding: 10x;
+  box-sizing: border-box;
+  background: #2c2c2c;
+  border: 1px solid #777;
+  border-radius: 0px;
+  color: #eee;
+  top: 0;
+  left: 0;
+}
+
+
+.hex-code:focus {
+  outline: 3px solid #2573b7;
+  border: 1px solid transparent;
+}
+
+
+.hex-code-square {
+  z-index: 1000;
+  position: relative;
+  margin: 7px 0px 0px 7px;
+  width: 16px;
+  height: 16px;
+  background: #000000;
+}
+
+.hex-code-square:hover {
+  cursor: pointer;
+}
+
+.colorjoe-container {
+  position: absolute;
+  z-index: 1000;
+  background: #2c2c2c;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  color: #eee;
+  font-family: "Montserrat", sans-serif;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.exit-modal {
+  height: 30px;
+  background: none;
+  text-align: right;
+  display: relative;
+}
+
+.exit-submit {
+  font-stretch:extra-expanded;
+  font-size: 17px;
+  height: 30px;
+  width: 30px;
+  font-weight: 100;
+  color: #c6c6c6;
+  background: none;
+  display: absolute;
+  right: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+.exit-submit:hover {
+  cursor: pointer;
+  border-radius: 0 5px 0 0;
+  background: #454545;
+}
+
+.exit-submit:active {
+  background: #1c1c1c;
+}
+
+
+.colorjoe-config {
+  display: grid;
+  grid-template-columns: 85px 165px 1fr;
+  padding: 10px 5px 10px 5px;
+  grid-gap: 2px;
+  margin-bottom: 10px;
+}
+
+.colorjoe-selected-color-mode {
+  border: 1px solid transparent;
+}
+
+.colorjoe-selected-color-mode #mode {
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  color: #eee;
+}
+
+.colorjoe-selected-color-mode #mode:hover {
+  border: 1px solid #777;
+}
+.colorjoe-selected-color-mode #mode:focus {
+  color: #eee;
+  outline: none;
+}
+.colorjoe-selected-color-mode #mode option {
+  background: #151515;
+  color: #eee;
+  outline: none;
+}
+
+.colorjoe-selected-color-text #hex,
+.colorjoe-selected-color-text #css {
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: none;
+  color: #eee;
+}
+.colorjoe-selected-color-text #hex:hover {
+  border: 1px solid #777;
+}
+
+.colorjoe-selected-color-text #hex:focus {
+  background: #151515;
+  border: 1px solid transparent;
+  color: #eee;
+  outline: 3px solid #2573b7;
+}
+.colorjoe-copy {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.colorjoe-copy .copy-color {
+  background: url(copy.svg) no-repeat center center;
+  height: 50%;
+  width: 50%;
+  box-sizing: border-box;
+  border: none;
+  filter: saturate(0%) brightness(200%) invert(0%) sepia(0%) hue-rotate(360deg)
+    opacity(100%) contrast(100%) drop-shadow(0px 0px 0px #000000) blur(0px)
+    grayscale(0%) brightness(100%) sepia(0%);
+}
+.colorjoe-copy .copy-color:hover {
+  cursor: pointer;
+  filter: saturate(100%) brightness(110%) invert(0%) sepia(0%)
+    hue-rotate(360deg) opacity(100%) contrast(100%)
+    drop-shadow(0px 0px 0px #000000) blur(0px) grayscale(0%) brightness(100%)
+    sepia(0%);
+}
+.colorjoe-copy .copy-color:active {
+  filter: saturate(100%) brightness(80%) invert(0%) sepia(0%) hue-rotate(360deg)
+    opacity(100%) contrast(100%) drop-shadow(0px 0px 0px #000000) blur(0px)
+    grayscale(0%) brightness(100%) sepia(0%);
+}
+.hex,
+.css {
+  width: 165px;
+  height: auto;
+  border: 1px solid transparent;
+}
+.rgb,
+.hsl,
+.hsb {
+  width: 165px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid transparent;
+}
+
+.rgb input,
+.hsl input,
+.hsb input {
+  font-size: 16px;
+  width: 31%;
+  box-sizing: border-box;
+  padding: 8px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: none;
+  color: #eee;
+}
+
+.colorjoe-selected-color-text input:hover {
+  border: 1px solid transparent;
+}
+
+.rgb:hover,
+.hsl:hover,
+.hsb:hover {
+  border: 1px solid #777;
+}
+
+.rgb #r:focus,
+.rgb #g:focus,
+.rgb #b:focus,
+.hsl #hsl-h:focus,
+.hsl #hsl-s:focus,
+.hsl #hsl-l:focus,
+.hsb #hsb-h:focus,
+.hsb #hsb-s:focus,
+.hsb #hsb-b:focus {
+  background: #151515;
+  border: 1px solid transparent;
+  color: #eee;
+  outline: none;
+}
+
+.rgb:focus-within,
+.hsl:focus-within,
+.hsb:focus-within {
+  outline: 3px solid #2573b7;
+}
+
+.colorjoe-selected-color-text #css:hover {
+  border: 1px solid #777;
+}
+
+.colorjoe-selected-color-text #css:focus {
+  background: #151515;
+  border: 1px solid transparent;
+  color: #eee;
+  outline: 3px solid #2573b7;
+}
+
+
+
+
+.hex-code-colorjoe-copy {
+  z-index: 1000;
+  width: 15px;
+  height: 15px;
+  padding: 7px;
+  position: absolute;
+  left: 89px;
+  top: 0;
+}
+
+.hex-code-colorjoe-copy .hex-code-copy-color {
+  background: url(copy.svg) no-repeat center center;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  filter: saturate(0%) brightness(200%) invert(0%) sepia(0%) hue-rotate(360deg)
+    opacity(100%) contrast(100%) drop-shadow(0px 0px 0px #000000) blur(0px)
+    grayscale(0%) brightness(100%) sepia(0%);
+}
+.hex-code-colorjoe-copy .hex-code-copy-color:hover {
+  cursor: pointer;
+  filter: saturate(100%) brightness(110%) invert(0%) sepia(0%)
+    hue-rotate(360deg) opacity(100%) contrast(100%)
+    drop-shadow(0px 0px 0px #000000) blur(0px) grayscale(0%) brightness(100%)
+    sepia(0%);
+}
+.hex-code-colorjoe-copy .hex-code-copy-color:active {
+  filter: saturate(100%) brightness(80%) invert(0%) sepia(0%) hue-rotate(360deg)
+    opacity(100%) contrast(100%) drop-shadow(0px 0px 0px #000000) blur(0px)
+    grayscale(0%) brightness(100%) sepia(0%);
+}
