@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "colorjoe": "^4.2.0"
+  },
+  "name": "awesome-picker",
+  "version": "1.0.0",
+  "description": "Awesome JS Color Picker",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boutzi/awsome-picker.git"
+  },
+  "keywords": [
+    "color",
+    "picker"
+  ],
+  "author": "Boutzi",
+  "license": "MIT",
+  "bugs": {},
+  "homepage": "https://github.com/Boutzi/awsome-picker#readme"
+}

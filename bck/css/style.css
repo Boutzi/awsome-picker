@@ -172,7 +172,7 @@ body {
   display: flex;
 }
 .colorjoe-copy .copy-color {
-  background: url(../images/copy.svg) no-repeat center center;
+  background: url(copy.svg) no-repeat center center;
   height: 50%;
   width: 50%;
   box-sizing: border-box;
@@ -278,7 +278,7 @@ body {
 }
 
 .hex-code-colorjoe-copy .hex-code-copy-color {
-  background: url(../images/copy.svg) no-repeat center center;
+  background: url(copy.svg) no-repeat center center;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
